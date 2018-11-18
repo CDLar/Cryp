@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
         crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
@@ -40,7 +42,7 @@
 	    width:14rem;
         margin-left:0.75rem;
         margin-right:0.75rem;
-        margin-bottom:1.2rem;
+        margin-bottom:1rem;
         border-radius:1.5rem;
         -moz-border-radius:1.5rem;
 	    -webkit-border-radius:1.5rem;
@@ -48,59 +50,68 @@
         padding-right:1.4rem;
         }
 
-.btn4:hover {
+    .btn4:hover {
 	background-color:#5808cf;
-}
-.btn4:active {
+    }
+    
+    .btn4:active {
 	position:relative;
 	top:1px;
-}
-        .btnBox{
-            margin-left:1.8rem;
-            width:72%;
-        }
-        h1 {
-            font: 700 1.1rem/1rem "Roboto";
-        }
+    }
+    
+    .btnBox{
+    margin-top:-2.2rem;
+    margin-left:1.8rem;
+    width:72%;
+    }
+        
+    @media (max-width: 990px) {
+    .btnBox{
+    width:100%      }
+    }
 
-        h2 {
-            font: 300 1.3rem/1rem "Roboto";
-        }
+    h1 {
+    font: 700 1.1rem/1rem "Roboto";
+    }
+
+    h2 {
+    font: 300 1.3rem/1rem "Roboto";
+    
+    }
     </style>
 </head>
 
-<body>
-    <div id="mainPage" class="container-fluid" style="overflow:hidden;">
-        <div class="row" style="margin:1rem auto;">
+<body style='overflow-x: hidden'>
+    <div id="mainPage" class="container-fluid">
+        <div class="row" style="margin:1rem auto;margin-right:-2rem;width:auto;">
             <div class="col-md-9">
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" style="width:100%" src="https://player.twitch.tv/?channel=cryptoyalty"></iframe>
+                    <iframe id="tVid" frameborder="0" scrolling="no" class="embed-responsive-item" style="height:85vh;width:100%"
+                        src="https://player.twitch.tv/?channel=cryptoyalty"></iframe>
                 </div>
             </div>
-            <div class="col-md-3" style="margin-left:-1.8rem;">
-                <iframe class="embed-responsive-item" style="height:605px;width:100%;" src="https://www.twitch.tv/embed/cryptoyalty/chat"></iframe>
+            <div class="col-md-3" style="margin-left:-1.95rem;margin-bottom:1.7rem;">
+                <iframe id="tChat" frameborder="0" scrolling="no" class="embed-responsive-item" style="height:85vh;width:100%;"
+                    src="https://www.twitch.tv/embed/cryptoyalty/chat?darkpopout"></iframe>
             </div>
         </div>
-        <div class="row" style="text-align:center;">
-            <div class="col-md-9 btnBox" style="">
-                <button type="button" class="btn4">
-                    <h2><i class="fas fa-plus"></i>     Subscribe</h2>
-                </button>
-                <button type="button" class="btn4">
-                    <h2><i class="fab fa-twitter"></i>     Twitter</h2>
-                </button>
-                <button type="button" class="btn4">
-                    <h2><i class="fab fa-youtube"></i>     Youtube</h2>
-                </button>
-                <button type="button" class="btn4">
-                    <h2><i class="fas fa-donate"></i>     Donate</h2>
-                </button>
-            </div>
-            <div class="col-md-3"></div>
+    </div>
+    <div class="row" style="text-align:center">
+        <div class="col-md-9 btnBox">
+            <button type="button" class="btn4">
+                <h2><i class="fas fa-plus"></i>     Subscribe</h2>
+            </button>
+            <button type="button" class="btn4">
+                <h2><i class="fab fa-twitter"></i>     Twitter</h2>
+            </button>
+            <button type="button" class="btn4">
+                <h2><i class="fab fa-youtube"></i>     Youtube</h2>
+            </button>
+            <button type="button" class="btn4">
+                <h2><i class="fas fa-donate"></i>     Donate</h2>
+            </button>
         </div>
-
-    </div>
-    </div>
+        <div class="col-md-3"></div>
     </div>
 </body>
 
